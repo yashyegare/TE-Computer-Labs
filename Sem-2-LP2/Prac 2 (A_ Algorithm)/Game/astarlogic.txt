@@ -1,0 +1,22 @@
+1.The print method is used to print the current state of the puzzle grid.
+
+2.The moveLeft, moveRight, moveUp, and moveDown methods are used to perform the tile movements in the puzzle grid. 
+These methods swap the empty space with the adjacent tile in the specified direction.
+
+3.The copy method is used to create a copy of the puzzle grid.
+
+4.The heuristic method calculates the heuristic value for a given state of the puzzle. 
+It uses the Manhattan distance heuristic, which sums the vertical and horizontal distances of each tile from its goal position.
+
+5.The moveTile method determines the best move to make based on the heuristic values of different possible moves and performs that move on the puzzle grid.
+
+6.The solveEight method recursively solves the 8-puzzle using the A* algorithm. 
+It repeatedly calls the moveTile method to make moves on the puzzle grid until the goal state is reached.
+
+7.The solvable method checks if a given puzzle configuration is solvable. 
+It uses the concept of inversion count to determine solvability. An inversion occurs when a tile precedes another tile with a lower number. If the number of inversions is even, the puzzle is solvable.
+
+8.In the main method, the user is prompted to enter the start state and the goal state of the puzzle. 
+The print method is used to display the initial state. If the start state is solvable, the solveEight method is called to solve the puzzle. Otherwise, an "Impossible To Solve" message is displayed.
+
+Note that the code assumes that the user enters valid inputs for the start and goal states, and it doesn't include error handling for invalid inputs.
